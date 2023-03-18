@@ -1,0 +1,81 @@
+<!-- to play: http://localhost:8000/Tabs_Technique01.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, World!</title>
+   <style>
+        body {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'poppins', 'sans-serif';
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            width: 380px;
+        }
+        .tabs label {
+            order: 1;
+            display: block;
+            padding: 10px 15px;
+            margin-right: 0.2rem;
+            cursor: pointer;
+            background-color: yellow;
+            font-weight: bold;
+            transition: background ease 0.3s;
+        }
+        .tabs .tab {
+            order: 99;
+            flex-grow: 1;
+            width: 100%;
+            height: 280px;
+            display: none;
+            padding: 1rem;
+            background-color: #fff;
+        }
+        .tabs input[type="radio"]{
+            display: none;
+        }
+        .tabs input[type="radio"]:checked + label {
+            background-color:#fff;
+        }
+        .tabs input[type="radio"]:checked + label +.tab{
+            display: block;
+        }
+
+
+   </style>
+</head>
+<body>
+	<div class="tabs">
+        <input type="radio" id="tabone" name="tabs" checked="checked">
+        <label for="tabone">First</label>
+        <div class="tab">
+            <h1>First</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id feugiat lectus, vitae ullamcorper odio. Sed gravida dolor euismod, dignissim dolor viverra, bibendum felis. Sed auctor, odio non ultrices aliquam, enim ante commodo augue, sed mattis mi velit at leo. Praesent ut sapien nulla. Sed bibendum arcu eget tortor blandit, sed faucibus velit lacinia. Donec eget vestibulum ex. 
+            </p>
+        </div>
+        <input type="radio" id="tabtwo" name="tabs">
+        <label for="tabtwo">Second</label>
+        <div class="tab">
+            <h1>Second</h1>
+            <p>
+                Integer sit amet lectus eget enim suscipit ultrices sed vel risus. Ut vitae ante id orci bibendum luctus in quis elit. Aliquam erat volutpat. Sed dapibus tortor eu commodo volutpat. Proin malesuada auctor orci, vel commodo magna fringilla quis. Ut consequat nunc ut libero malesuada, vel congue est fermentum. Sed quis dolor eget justo iaculis accumsan. Duis euismod ut purus vel suscipit.
+            </p>
+        </div>
+        <input type="radio" id="tabthree" name="tabs">
+        <label for="tabthree">Third</label>
+        <div class="tab">
+            <h1>Third</h1>
+            <p>
+                Nam rhoncus mauris nec nibh ullamcorper, in hendrerit sapien feugiat. Sed dignissim felis vel mauris ultricies, nec ullamcorper quam commodo. Aenean mollis libero in urna vehicula posuere. Sed ac sem vitae metus vehicula varius nec sed enim. Fusce tincidunt diam in diam viverra, vel scelerisque neque gravida. Aenean auctor justo eu est commodo aliquam. Sed dapibus felis ac lectus vestibulum, eu hendrerit dolor consectetur. Maecenas commodo sit amet elit id gravida.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
