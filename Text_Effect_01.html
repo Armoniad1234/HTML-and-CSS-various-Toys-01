@@ -1,0 +1,110 @@
+
+
+<!-- to play: http://localhost:8000/Text_Effect_01.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, World!</title>
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+    body {
+        margin: 0px;
+        font-family: 'Roboto';
+        text-align: center;
+    }
+    
+    #container {
+        color: rgb(244, 170, 170);
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: bold;
+        
+        position: fixed;
+        width: 100%;
+        bottom: 75%;
+        display: block;
+    }
+    #flip {
+        height: 50px;
+        overflow: hidden;
+        text-align: center;
+        position: relative; /* Add this */
+    }
+    #flip > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -10px;
+        left:50%;
+        height: 100%;
+        width: 0%;
+      }
+      
+    #flip>div>div {
+        color: #00a;
+        display: inline-block;       
+                
+    }
+    
+   
+    #flip div > div:nth-child(1) {
+        background: #5be78f;
+        opacity: 1;
+    
+        animation: 6s linear  infinite show;
+        
+    }
+    #flip div:nth-child(2) div {
+        background: #4ec7f3;
+        opacity: 0;
+     
+        animation: 6s linear 2s  infinite show;
+        
+    }
+    #flip div:nth-child(3) div {
+        background: rgb(224, 243, 78);
+        opacity: 0;
+       
+        animation: 6s linear 4s infinite show;
+        
+    }
+  
+
+    @keyframes show {
+        0% {
+            /* pushes the sun down past the viewport */
+            transform: translateY(0px);
+            opacity: 1;
+          }
+          33% {
+            /* returns the sun to its default position */
+            transform: translateY(50px);
+            opacity: 0;
+          }
+      100% {opacity: 0;}
+          
+        }
+      
+
+ </style>
+</head>
+<body>
+    <div id=container>
+        Make
+        <div id=flip>
+            <div>
+                 <div>wOrK</div>
+            </div> 
+            <div>
+                 <div>Lifestyle</div>
+            </div> 
+            <div>
+                 <div>Everything</div>
+            </div> 
+           
+        </div>
+        AweSoMe!
+    </div>
+</body>
+</html>
